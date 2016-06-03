@@ -1,0 +1,234 @@
+body{
+    font-family: Segoe, Arial, sans-serif;
+    margin: -16px 0 0 0;
+    padding: 0;
+}
+
+ /* nav menu */
+nav{
+    width: 70%;
+    display: inline;
+    margin: 0 0 0 0;
+    /*border: solid 1px black;*/
+}
+
+#pageHeader > nav > ul > li{
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 7em;
+    line-height: 50px;
+    display: inline;
+    float: left;
+    text-align: center;
+}
+
+#pageHeader > nav > ul > li:hover{
+    background-color: #f6f6f6;
+}
+
+ul.sub{
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    position: absolute;
+    left: -9999px;
+    padding: 0;
+}
+
+#pageHeader > nav > ul > li:hover > ul.sub{
+    left: inherit;
+    display: inline;
+}
+
+ul.sub > li{
+    text-align: left;
+    background-color: #eeeeee;
+    list-style: none;
+    padding: 5px;
+}
+
+ul.sub > li:hover{
+    background-color: #e0e0e0;
+}
+
+li > a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+/* Authorization panel */
+div.auth{
+    position: absolute;
+    left: 90%;
+    /*width: 20%;*/
+    display: inline-block;
+    line-height: 50px;
+    /*margin: 0 0 0 55%;*/
+}
+
+a.clear{
+    text-decoration: none;
+    color: black;
+}
+
+#pageHeader{
+    width: 100%;
+}
+
+#titleImage{
+    float: left;
+    margin: 0 20px -4px 0;
+}
+
+section{
+    clear: left;
+}
+
+div.mainImage{
+    width: 100%;
+    background-color: #C4DF6D;
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    /*padding: 0 20% 0 20%;*/
+}
+
+img.main{
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    /*max-height: 400px;*/
+}
+
+img.inTextLeft{
+    display: block;
+    margin: 0 10px 10px 10px;
+    max-width: 25%;
+    max-height: 25%;
+    float: left;
+    padding: 0;
+}
+
+img.inTextRight{
+    display: block;
+    margin: 0 10px 10px 10px;
+    max-width: 25%;
+    max-height: 25%;
+    float: right;
+    padding: 0;
+}
+
+/* Content */
+h1{
+    text-align: center;
+}
+
+div.text{
+    margin: 0 10% 0px 10%;
+    padding: 0 20px 20px 20px;
+    width: 80%
+    color: #222222;
+    text-align: justify;
+}
+
+p{
+
+}
+
+
+table{
+    display: inline;
+}
+
+table{
+    margin: 0px 20px 20px 40px ;
+}
+
+td{
+    margin: 2px;
+}
+
+
+div.separator{
+    clear: both;
+    background-color: #8CD668;
+    width: 100%;
+    height: 50px;
+}
+
+div.person{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    clear: left;
+    /*height: 300px;*/
+    overflow: hidden;
+    padding: 10px;
+    background-color: #E4DD6F;
+    /*background-color: #FFF7D3;*/
+}
+
+
+div.personPhoto{
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+/* todo: center align for photo */
+div.personPhoto > img{
+    width: 100%;
+    display: block;
+    /*height: 100%;*/
+}
+
+div.personInfo{
+    height: 100%;
+    margin-left: 25%;
+    padding-left: 20px;
+}
+
+div.mes{
+    margin: 20px;
+    padding: 5px;
+    display: inline-block;
+    background-color: #EDFFFF;
+}
+
+
+
+#pageFooter{
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    background-color: #EDFFFF;
+}
+
+#pageFooter > div{
+    margin: 5px 0 5px 0;
+}
+
+/* News */
+article{
+    margin: 0 0 10px 20%;
+    width: 60%;
+}
+
+.data{
+    margin-left: 90%;
+    font-size: 0.8em;
+}
+
+.pages{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
