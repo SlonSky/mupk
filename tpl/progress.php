@@ -1,35 +1,3 @@
-<?php header('Content-type: text/html; charset=utf-8'); ?>
-
-<html lang="ua">
-<head>
-    <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="./css/main1.css">
-    <title>Успішність учнів</title>
-</head>
-<body>
-<header id="pageHeader">
-    <a href="index.php" id="titleImage"><img src="images/main.png"></a>
-    <nav>
-        <ul>
-            <li>Все про нас
-                <ul class="sub">
-                    <li><a href="career.html">Профорієнтаційна робота</a></li>
-                    <li><a href="education.html">Профільне навчання</a></li>
-                    <li><a href="regulatory.html">Нормативно-правова база</a></li>
-                    <li><a href="validation.html">Атестація педпрацівників</a></li>
-                </ul>
-            </li>
-            <li>Наші учні
-                <ul class="sub">
-                    <li><a href="progress.php">Успішність учнів</a></li>
-                    <li><a href="graduates.php">Випуск учнів</a></li>
-                </ul>
-            </li>
-            <li><a href="gallery.html">Фотогалерея</a></li>
-        </ul>
-    </nav>
-</header>
 <section>
     <div class="mainImage"><img class="main" src="images/progres.jpg"></div>
     <h1>Успішність учнів</h1>
@@ -91,12 +59,3 @@
 </section>
 
 <div class="separator"></div>
-<footer id="pageFooter">
-
-    <div>2016 © <b>Болградский МУПК</b><br></div>
-    <div>upk-bolgrad@mail.com<br></div>
-    <div> 982-12-49</div>
-</footer>
-</body>
-
-</html>

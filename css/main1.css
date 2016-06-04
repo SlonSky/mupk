@@ -58,7 +58,7 @@ li > a{
 /* Authorization panel */
 div.auth{
     position: absolute;
-    left: 90%;
+    left: 85%;
     /*width: 20%;*/
     display: inline-block;
     line-height: 50px;
