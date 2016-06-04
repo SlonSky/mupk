@@ -6,7 +6,7 @@
     <title><?=@ $this->title; ?></title>
 </head>
 
-<body>
+<body onload="hidePopup()">
 <header id="pageHeader">
     <a href="?" id="titleImage"><img src="images/main.png"></a>
     <nav>
@@ -32,7 +32,7 @@
     <div class="auth">
         <?php
         if (empty($_SESSION['login']) or empty($_SESSION['id'])) {
-            echo "<a href=\"?login\">Увійти</a>|<a href=\"?register\">Реєстрація</a>";
+            echo "<span style='cursor: pointer' onclick='showLogin();'>Увійти</span>|<span style='cursor: pointer'  onclick='showRegister()'>Реєстрація</sp>";
         } else {
             echo "<a href=\"\" class='clear'>".$_SESSION['login']."</a>
               <a href=\"?userExit\">Вийти</a>";
@@ -40,6 +40,8 @@
         ?>
     </div>
 </header>
+
+<?php include("tpl/login/forms.php"); ?>
 
 <section>
 <?php $this->out($this->tpl, true); ?>
