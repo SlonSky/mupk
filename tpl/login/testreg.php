@@ -18,8 +18,9 @@ $password = trim($password);
 // подключаемся к базе
 //include("bd.php");// файл bd.php должен быть в той же папке, что и все остальные, если это не так, то просто измените путь
 
-$result = mysqli_query($db, "SELECT * FROM users WHERE login='$login'"); //извлекаем из базы все данные о пользователе с введенным логином
-$myrow = mysqli_fetch_array($result);
+
+$myrow = $this->db->query("SELECT * FROM users WHERE login='$login'")->assoc();
+
 if (empty($myrow['password']))
 {
     //если пользователя с введенным логином не существует
@@ -31,8 +32,7 @@ else {
         //если пароли совпадают, то запускаем пользователю сессию! Можете его поздравить, он вошел!
         $_SESSION['login']=$myrow['login'];
         $_SESSION['id']=$myrow['id'];//эти данные очень часто используются, вот их и будет "носить с собой" вошедший пользователь
-//        exit("<!DOCTYPE html><html lang='ua'><head><meta    http-equiv='Refresh' content='0;    URL='?''></head><body></body></html>");
-        header("Location: /mupk/index.php/");
+        exit("<!DOCTYPE html><html lang='ua'><head><meta http-equiv='Refresh' content='0; URL=index.php'></head><body></body></html>");
     }
     else {
         //если пароли не сошлись

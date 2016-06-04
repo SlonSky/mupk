@@ -31,11 +31,11 @@
 
     <div class="auth">
         <?php
-        if (empty($_SESSION['login_old']) or empty($_SESSION['id'])) {
-            echo "<a href=\"login_old/regForm.php\">Увійти</a>|<a href=\"login_old/reg.php\">Реєстрація</a>";
+        if (empty($_SESSION['login']) or empty($_SESSION['id'])) {
+            echo "<a href=\"?login\">Увійти</a>|<a href=\"?register\">Реєстрація</a>";
         } else {
-            echo "<a href=\"login_old/regForm.php\" class='clear'>".$_SESSION['login']."</a>
-              <a href=\"login_old/exit.php\">Вийти</a>";
+            echo "<a href=\"\" class='clear'>".$_SESSION['login']."</a>
+              <a href=\"?userExit\">Вийти</a>";
         }
         ?>
     </div>
