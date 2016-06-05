@@ -25,7 +25,7 @@ class app{
         $url = array_shift($this->route);
         if(!preg_match("#^[a-zA-Z0-9.,-]*$#", $url)) throw new Exception('Invalid path');
         $ctrlName = 'ctrl'. ucfirst($url);
-        if(file_exists('app/'.$ctrlName)){
+        if(file_exists('app/'.$ctrlName.".php")){
             $this->runController($ctrlName);
         } else {
             array_unshift($this->route, $url);
@@ -45,9 +45,18 @@ class app{
             else {
                 $method = array_shift($this->route);
             }
-            if(method_exists($ctrl, $method)){
-                $ctrl->$method();
-            } else throw new Exception("Error 404");
+            if(count($this->route) > 0){
+                $this->callMethod($ctrl, $method, array_shift($this->route));
+            } else {
+                $this->callMethod($ctrl, $method);
+            }
+
         }
+    }
+
+    private function callMethod($ctrl, $method, $arg=null){
+        if(method_exists($ctrl, $method)){
+            $ctrl->$method($arg);
+        } else throw new Exception("Error 404");
     }
 }

@@ -4,7 +4,7 @@
         <img src="images/close.png" id="close" onclick="hidePopup()">
 
         <!-- login form -->
-        <form id="loginForm" class="innerForm" action="?testReg" method="post" onsubmit="checkLoginData(); return false;">
+        <form id="loginForm" class="innerForm" action="?Login/testReg" method="post" onsubmit="checkLoginData(); return false;">
             <h3>Вхід</h3>
             <p><label>Ваш логін:<br></label>
                 <input name="login" id="login" type="text" size="15" maxlength="15"></p>
@@ -15,7 +15,7 @@
         </form>
 
         <!-- registration form -->
-        <form id="registerForm" class="innerForm" action="?save" method="post" onsubmit="checkRegisterData(); return false;">
+        <form id="registerForm" class="innerForm" action="?Login/save" method="post" onsubmit="checkRegisterData(); return false;">
             <h3>Реєстрація</h3>
             <p><label>Ваш логін:<br></label>
                 <input name="login" id="loginReg" type="text" size="15" maxlength="15"></p>
@@ -24,10 +24,8 @@
             <p><input type="submit" name="submit" value="Зареєструватися"></p>
             <p class="message" id="messageReg"></p>
         </form>
-
     </div>
 </div>
-
 
 <script>
 

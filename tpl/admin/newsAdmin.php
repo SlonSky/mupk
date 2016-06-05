@@ -20,9 +20,10 @@
 </section>
 <div class="separator"></div>
 <h1>Новини</h1>
+<h3><a style="margin-left: 20%" href="?Admin/addForm">Додати новину</a></h3>
 <? foreach($this->posts as $value){?>
     <article>
-        <header><h3><?=$value['title']?></h3></header>
+        <header><h3><?=$value['title']?></h3></header><a href="?Admin/delete/<?=$value['id']?>">видалити</a>|<a href="?Admin/editForm/<?=$value['id']?>">редагувати</a>
         <section>
             <p><?=$value['post']?></p><div class="data"><?=date('d-m-Y', $value['ctime'])?></div>
         </section>

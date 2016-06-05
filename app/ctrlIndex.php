@@ -3,31 +3,20 @@
 class ctrlIndex extends ctrl{
 
     function index(){
-        $this->posts = $this->db->query("SELECT * FROM posts ORDER BY ctime DESC")->all();
-        $this->out("news.php");
+
+        include ("ctrlAdmin.php");
+        $admin = new ctrlAdmin();
+
+        if($admin->isAdmin()){
+            $admin->index();
+        } else {
+            $this->posts = $this->db->query("SELECT * FROM posts ORDER BY ctime DESC")->all();
+            $this->out("news.php");
+        }
     }
 
-
-    function login(){
-        $this->out("login/login.php");
-    }
-
-    function testReg(){
-
-        $this->out("login/testreg.php");
-    }
-
-    function userExit(){
-        $this->out("login/exit.php");
-    }
-
-
-    function save(){
-        $this->out("login/save.php");
-    }
-
-    function register(){
-        $this->out("login/register.php");
+    function team(){
+        $this->out("team.html");
     }
 
     function career(){
@@ -37,6 +26,30 @@ class ctrlIndex extends ctrl{
     function progress(){
         $this->out("progress.php");
     }
+
+    function selectProgress(){
+
+    }
+
+    function education(){
+        $this->out("education.html");
+    }
+
+    function regulatory(){
+        $this->out("regulatory.html");
+    }
+
+    function validation(){
+        $this->out("validation.html");
+    }
+
+    function graduates(){
+        $this->out("graduates.php");
+    }
+
+
+
+
 
 
 }
