@@ -1,8 +1,9 @@
 <section>
     <div class="mainImage"><img class="main" src="images/progres.jpg"></div>
     <h1>Успішність учнів</h1>
+    <div  class="progress">
     <h3>Введіть дані для пошуку групи:</h3>
-    <form method="post" action="?selectProgress">
+    <form method="post" action="?progress">
         <select name="school" >
             <option value="БЗШ № 3">БЗШ № 3</option>
             <option value="КринОШ">КринОШ</option>
@@ -21,10 +22,24 @@
             <option value="Friday">П'ятниця</option>
         </select>
         <select name="class">
-            <option value="10">10</option>
-            <option value="11">11</option>
+            <option value="10">10 клас</option>
+            <option value="11">11 клас</option>
         </select>
         <input type="submit" value="Шукати">
-        <input type="hidden" name="state" value="sent">
-    </form>
+    </form></div>
+
+    <?php
+    echo "<div class='mes'>";
+        if(count($this->students) < 1) {
+        echo "<div>Не знайдено записів.</div>";
+        } else {
+        echo "<h4>Результати пошуку:</h4><table><tr><td><b>Учень</b></td><td><b>Школа</b></td></tr>";
+            foreach($this->students as $student){
+            echo "<tr><td>".$student["Name"]."</td><td>".$student["School"]."</td></tr>";
+            }
+            echo "</table></div>";
+        }
+        ?>
+</section>
+<div class="separator"></div>
 

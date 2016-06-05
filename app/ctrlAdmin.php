@@ -51,4 +51,32 @@ class ctrlAdmin extends ctrl{
         $this->index();
     }
 
+    function progress($students){
+        $this->students = $students;
+        $this->out("admin/progressAdmin.php");
+    }
+
+    function deleteStudent($id){
+        $this->id = $id;
+        $this->db->query("DELETE FROM students WHERE id='$this->id'");
+        $this->progress($this->students);
+    }
+
+    function addStudentForm(){
+        $this->out("admin/addStudentForm.php");
+    }
+
+    function addStudent(){
+        $school = $_POST["school"];
+        $specialty = $_POST["specialty"];
+        $day = $_POST["day"];
+        $class = $_POST["class"];
+        $name = $_POST["name"];
+        $birthday = $_POST["birthday"];
+        if(!empty($school) && !empty($specialty) && !empty($day) && !empty($class) && !empty($name) && !empty($birthday)){
+            $this->db->query("INSERT INTO students (school, specialty, day, class, name, birthday) VALUES ('$school', '$specialty', '$day', '$class', '$name', '$birthday')");
+        }
+        $this->progress($this->students);
+    }
+
 }

@@ -5,10 +5,10 @@ class ctrlIndex extends ctrl{
     function index(){
 
         include ("ctrlAdmin.php");
-        $admin = new ctrlAdmin();
+        $this->admin = new ctrlAdmin();
 
-        if($admin->isAdmin()){
-            $admin->index();
+        if($this->admin->isAdmin()){
+            $this->admin->index();
         } else {
             $this->posts = $this->db->query("SELECT * FROM posts ORDER BY ctime DESC")->all();
             $this->out("news.php");
@@ -24,11 +24,20 @@ class ctrlIndex extends ctrl{
     }
 
     function progress(){
-        $this->out("progress.php");
-    }
+        $school = $_POST["school"];
+        $specialty = $_POST["specialty"];
+        $day = $_POST["day"];
+        $class = $_POST["class"];
+        $this->students = $this->db->query("SELECT * FROM students WHERE (school, specialty, day, class)=('$school', '$specialty', '$day', '$class')")->all();
 
-    function selectProgress(){
 
+        include ("ctrlAdmin.php");
+        $this->admin = new ctrlAdmin();
+        if($this->admin->isAdmin()){
+            $this->admin->progress($this->students);
+        } else {
+            $this->out("progress.php");
+        }
     }
 
     function education(){
@@ -44,7 +53,11 @@ class ctrlIndex extends ctrl{
     }
 
     function graduates(){
-        $this->out("graduates.php");
+        $this->out("graduates.php", true);
+    }
+
+    function gallery(){
+        $this->out("gallery.php", true);
     }
 
 

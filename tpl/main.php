@@ -36,7 +36,7 @@
             echo "<span style='cursor: pointer' onclick='showLogin();'>Увійти</span>|<span style='cursor: pointer'  onclick='showRegister()'>Реєстрація</sp>";
         } else {
             echo "<a href=\"\" class='clear'>".$_SESSION['login']."</a>
-              <a href=\"?Login/userExit\">Вийти</a>";
+              <a href=\"?Login/userExit\" class='clear'>Вийти</a>";
         }
         ?>
     </div>
@@ -49,9 +49,11 @@
 </section>
 
 <footer id="pageFooter">
-    <div>2016 © <b>Болградский МУПК</b><br></div>
-    <div>upk-bolgrad@mail.com<br></div>
-    <div> 982-12-49</div>
+    <div>2016 | <b>Болградський міжшкільний навчально-виробничий комбінат</b><br></div>
+    <div>адреса: 68702, Україна, Одеська область,
+        м.Болград, пр.Леніна, 154
+        <br></div>
+    <div>тел./факс: (804846) 4-28-95</div>
 </footer>
 </body>
 </html>
