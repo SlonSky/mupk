@@ -47,7 +47,7 @@ class ctrlAdmin extends ctrl{
     function delete($id){
         $this->id = $id;
         $this->db->query("DELETE FROM posts WHERE id='$this->id'");
-        header('Location index.php');
+        header('Location /');
         $this->index();
     }
 

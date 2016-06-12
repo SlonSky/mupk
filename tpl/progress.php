@@ -35,7 +35,7 @@
         } else {
         echo "<h4>Результати пошуку:</h4><table><tr><td><b>Учень</b></td><td><b>Школа</b></td></tr>";
             foreach($this->students as $student){
-            echo "<tr><td>".$student["Name"]."</td><td>".$student["School"]."</td></tr>";
+            echo "<tr><td>".$student["name"]."</td><td>".$student["school"]."</td></tr>";
             }
             echo "</table></div>";
         }

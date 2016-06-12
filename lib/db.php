@@ -3,7 +3,8 @@
 class db{
 
     public function __construct(){
-        $this->mysqli = new mysqli("localhost", "Slonsky", "slonsky", "UPK");
+//        $this->mysqli = new mysqli("localhost", "Slonsky", "slonsky", "UPK"); // localhost
+        $this->mysqli = new mysqli("mysql.hostinger.pl", "u339875547_mupk", "mupkbolgrad9999", "u339875547_mupk"); // server
     }
 
     public function query($sql){

@@ -59,10 +59,4 @@ class ctrlIndex extends ctrl{
     function gallery(){
         $this->out("gallery.php", true);
     }
-
-
-
-
-
-
 }

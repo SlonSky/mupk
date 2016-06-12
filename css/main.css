@@ -10,14 +10,18 @@ nav{
     width: 70%;
     display: inline;
     margin: 0 0 0 0;
-    /*border: solid 1px black;*/
+}
+
+#titleImage{
+    display: inline;;
+    float: left;
 }
 
 #pageHeader > nav > ul > li{
     margin: 0 0 0 0;
     padding: 0;
     width: 7em;
-    line-height: 50px;
+    line-height: 54px;
     display: inline;
     float: left;
     text-align: center;
@@ -114,10 +118,6 @@ a.clear{
     width: 100%;
 }
 
-#titleImage{
-    float: left;
-    margin: 0 20px -4px 0;
-}
 
 section{
     clear: left;
@@ -153,16 +153,19 @@ img.inTextRight{
     padding: 0;
 }
 
+
+
 h1{
     text-align: center;
 }
 
 div.text{
-    margin: 0 10% 0px 10%;
-    padding: 0 20px 20px 20px;
+    margin: 10px 10% 10px 10%;
+    padding: 10px 30px 10px 30px;
     width: 80%
     color: #222222;
     text-align: justify;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 /*.text{*/

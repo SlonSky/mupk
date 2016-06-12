@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
-    <title><?=@ $this->title; ?></title>
+    <link rel="icon" href="images/logo.jpg">
+    <title>Болградьский МНВК</title>
 </head>
 
 <body onload="hidePopup()">
